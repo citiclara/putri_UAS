@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonton</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            min-width: 320px;
+            /* Minimum width for smallest phones */
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+        }
+
+        .header-1 {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 16px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
+
+        .header-1 img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .content {
+            margin-top: 50px;
+            background-color: white;
+            width: 100%;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .page-header h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .search-icon {
+            width: 40px;
+            height: 30px;
+            margin-left: 12px;
+        }
+
+        .post {
+            background: white;
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .post-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .post-header div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .post-header a {
+            color: #1877f2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .post-header button {
+            background: none;
+            border: none;
+            padding: 4px 8px;
+            color: #65676b;
+            font-size: 1rem;
+        }
+
+        .post p {
+            word-wrap: break-word;
+            /* Ensure text wraps properly */
+            overflow-wrap: break-word;
+        }
+
+        .post-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 0;
+            margin: 8px 0;
+        }
+
+        .likes-comments {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0;
+            color: #65676b;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .likes-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .likes-left img {
+            width: 18px;
+            height: 18px;
+            margin-right: 4px;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-top: 1px solid #eee;
+            margin-top: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .action-button {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: -20%;
+            margin-top: -1%;
+        }
+
+        .post-actions img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .reels-container {
+            padding: 12px 16px;
+            width: 100%;
+        }
+
+        .reels-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .reels {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 4px 0;
+            -webkit-overflow-scrolling: touch;
+            /* Smooth scrolling on iOS */
+            scrollbar-width: none;
+            /* Hide scrollbar Firefox */
+            -ms-overflow-style: none;
+            /* Hide scrollbar IE/Edge */
+        }
+
+        .reels::-webkit-scrollbar {
+            display: none;
+            /* Hide scrollbar Chrome/Safari */
+        }
+
+        .reel-item {
+            width: 140px;
+            height: 240px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .reel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .reel-item p {
+            position: absolute;
+            top: 0;
+            right: 8px;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Media queries for different screen sizes */
+        @media screen and (max-width: 480px) {
+            .header-1 {
+                padding: 8px;
+            }
+
+            .header-1 img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .search-icon {
+                width: 30px;
+                height: 24px;
+                margin-left: 8px;
+            }
+
+            .post-actions {
+                justify-content: space-around;
+            }
+
+            .action-button {
+                margin-left: 0;
+                font-size: 0.9rem;
+            }
+
+            .reel-item {
+                width: 120px;
+                height: 200px;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .post-header div {
+                min-width: 150px;
+            }
+
+            .likes-comments {
+                font-size: 0.8rem;
+            }
+
+            .reel-item {
+                width: 100px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-1">
+            <a href="index.html"><img src="img/home.jpg" alt="home"></a>
+            <a href="nonton.html"><img src="img/watch.jpg" alt="nonton"></a>
+            <a href="teman.html"><img src="img/add_friends.jpg" alt="teman"></a>
+            <img src="img/user.jpg" alt="user">
+            <img src="img/bel.jpg" alt="notif">
+            <a href="lainnya.html"><img src="img/lainnya.jpg" alt="lain"></a>
+        </div>
+
+        <div class="content">
+            <div class="page-header">
+                <h2>Video</h2>
+                <div>
+                    <img src="img/user.jpg" alt="user" class="search-icon">
+                    <img src="img/cari.jpg" alt="cariteman" class="search-icon">
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <img src="img/New Upin & Ipin Wallpaper.jpg" alt="user">
+                    <div>
+                        <strong>Drama Movie</strong>
+                        <a href="">· Ikuti</a>
+                        <div style="color: #65676b; font-size: 0.8rem;">23 Des</div>
+                    </div>
+                    <button>...</button>
+                    <button>✕</button>
+                </div>
+                <p>Upin & Ipin musim 18 Full Movie - Rumah Atok Roboh | Upin Ipin Terbaru 20... <a href=""
+                        style="color: #1877f2;">Lihat Selengkapnya</a></p>
+                <img src="img/th.jpeg" alt="Movie Screenshot" class="post-image">
+
+                <div class="likes-comments">
+                    <div class="likes-left">
+                        <img src="img/suka.jpg" alt="like">
+                        <span>Tiara +30.432</span>
+                    </div>
+                    <span>231 Komentar · 2.6jt tayangan</span>
+                </div>
+
+                <div class="post-actions">
+                    <img src="img/like.jpg" alt="like">
+                    <p class="action-button">Suka</p>
+                    <img src="img/komen.jpg" alt="komen" style="width: 70px; height: 70px; margin-top: -1.3%;">
+                    <p class="action-button">Komentar</p>
+                    <img src="img/wa.jpg" alt="wa" style="width: 40px; height: 40px;">
+                    <p class="action-button">Kirim</p>
+                    <img src="img/share.jpg" alt="share" style="width: 60px; height: 60px; margin-top: -1.1%;">
+                    <p class="action-button">Bagikan</p>
+                </div>
+            </div>
+
+            <div class="reels-container">
+                <div class="reels-header">
+                    <img src="img/video_7264012.png" alt="reels" style="width: 24px; height: 24px;">
+                    <strong>Reels</strong>
+                </div>
+                <div class="reels">
+                    <div class="reel-item">
+                        <img src="img/reels-2.jpg" alt="reels">
+                        <p>...</p>
+                    </div>
+                    <div class="reel-item">
+                        <img src="img/reels-3.jpg" alt="reels">
+                        <p>...</p>
+                    </div>
+                    <div class="reel-item">
+                        <img src="img/reels-4.jpg" alt="reels">
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

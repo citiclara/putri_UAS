@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acara</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: white;
+            padding: 12px 16px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .header img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            margin-left: 8px;
+        }
+
+        .header h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 16px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .header-1 {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            position: fixed;
+            top: 53px;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            z-index: 999;
+        }
+
+        .header-1 p {
+            font-size: 14px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .header-1 p.active {
+            color: #1877f2;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 120px 16px 16px;
+        }
+
+        .post {
+            background-color: white;
+            margin-bottom: 16px;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .post img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .post h5 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .post p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .post-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-buttons button {
+            display: flex;
+            align-items: center;
+            background-color: #f1f1f1;
+            border: none;
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 14px;
+            color: #555;
+            cursor: pointer;
+            gap: 8px;
+        }
+
+        .post-buttons button img {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="lainnya.html" style="text-decoration: none;"><img src="img/left.png" alt="panah"></a>
+            <h2>Acara</h2>
+            <img src="img/acara.jpg" alt="acara">
+            <img src="img/add.jpg" alt="tambah">
+            <img src="img/cari.jpg" alt="cari">
+        </div>
+
+        <!-- Sub-header -->
+        <div class="header-1">
+            <p class="active">Untuk Anda</p>
+            <p>Minggu Ini</p>
+            <p>Teman</p>
+            <p>Grup</p>
+            <p>Mengikuti</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Post 1 -->
+            <div class="post">
+                <img src="img/maxresdefault.jpg" alt="Rewind to 90's">
+                <p>Sel, 31 Des Pukul 20.00 WITA</p>
+                <h5>REWIND TO 90'S WITH ELFA'S SINGER</h5>
+                <p>Jalan Embong Malang 25-31, Kota Surabaya</p>
+                <p>131 Tertarik . 19 Hadir</p>
+                <div class="post-buttons">
+                    <button><img src="img/star.png" alt="bintang">Tertarik</button>
+                    <button><img src="img/share_9068857.png" alt="share">Bagikan</button>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post">
+                <img src="img/makanan.jpg" alt="Makanan">
+                <p>Kam, 2 Jan 2025 Pukul 13.00 WITA</p>
+                <h5>Hub https://wa.me/6281231666605</h5>
+                <p>Alamat: Jl. Raya Kebonsari No. 8 Surabaya</p>
+                <p>25 Tertarik . 1 Hadir</p>
+                <div class="post-buttons">
+                    <button><img src="img/star.png" alt="bintang">Tertarik</button>
+                    <button><img src="img/share_9068857.png" alt="share">Bagikan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            padding-top: 70px;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            background-color: #ffffff;
+            margin: 0 auto;
+        }
+
+        .header-1 {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 16px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
+
+        .header-1 img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 16px;
+        }
+
+        .page-header h2 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-top: -12%;
+        }
+
+        .search-icon {
+            margin-top: -12%;
+            width: 30px;
+            height: 30px;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            text-decoration: none;
+            margin: 3%;
+            margin-top: -9%;
+        }
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item-1 {
+            display: flex;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 3%;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .menu-item-1 img {
+            width: 50px;
+            height: 40px;
+        }
+
+        .menu-item img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+        }
+
+        .menu-item p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .content {
+            margin-top: 60px;
+            padding: 16px;
+        }
+
+        .profil {
+            display: flex;
+            padding: 12px;
+            border: 1px solid #303030;
+            background-color: #ffffff;
+            top: -130px;
+            margin-bottom: 60px;
+            gap: 8px;
+            margin: 3%;
+            position: relative;
+            align-items: center;
+        }
+
+        .profil img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .profil p {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1c1e21;
+            margin: 0;
+        }
+
+        .logout {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .logout button {
+            padding: 10px 16px;
+            font-size: 1rem;
+            color: white;
+            background-color: #d9534f;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .logout button:hover {
+            background-color: #c9302c;
+        }
+
+        /* Tambahan untuk pop-up */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .popup {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .popup button {
+            padding: 10px 16px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .popup .cancel {
+            background-color: #ddd;
+        }
+
+        .popup .confirm {
+            background-color: #d9534f;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-1">
+            <a href="index.html"><img src="img/home.jpg" alt="Home"></a>
+            <a href="nonton.html"><img src="img/watch.jpg" alt="Watch"></a>
+            <a href="teman.html"><img src="img/add_friends.jpg" alt="Friends"></a>
+            <img src="img/user.jpg" alt="User">
+            <img src="img/bel.jpg" alt="Notifications">
+            <a href="lainnya.html"><img src="img/lainnya.jpg" alt="More"></a>
+        </div>
+
+        <div class="content">
+            <div class="page-header">
+                <h2>Menu</h2>
+                <img src="img/cari.jpg" alt="cariteman" class="search-icon">
+            </div>
+        </div>
+
+        <div class="profil">
+            <img src="img/user.jpg" alt="Profile" style="width: 40px; height: 35px; border-radius: 50%;">
+            <p>Putryani</p>
+        </div>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="img/kenangan.jpg" alt="Memories">
+                <p>Kenangan</p>
+            </div>
+            <div class="menu-item">
+                <img src="img/tersimpan.jpg" alt="Saved">
+                <p>Tersimpan</p>
+            </div>
+            <div class="menu-item">
+                <img src="img/group.jpg" alt="Groups">
+                <p>Grup</p>
+            </div>
+            <a href="nonton.html" style="text-decoration: none;">
+                <div class="menu-item">
+                    <img src="img/watch.jpg" alt="Videos">
+                    <p>Video</p>
+                </div>
+            </a>
+            <div class="menu-item">
+                <img src="img/teman.jpg" alt="Friends">
+                <p>Teman (10 Online)</p>
+            </div>
+            <a href="kabar.html" style="text-decoration: none;">
+                <div class="menu-item">
+                    <img src="img/kabar.jpg" alt="News">
+                    <p>Kabar</p>
+                </div>
+            </a>
+            <a href="acara.html" style="text-decoration: none;">
+                <div class="menu-item">
+                    <img src="img/acara.jpg" alt="Events">
+                    <p>Acara</p>
+                </div>
+            </a>
+            <div class="menu-item">
+                <img src="img/game.jpg" alt="Games">
+                <p>Game</p>
+            </div>
+        </div>
+        <div class="menu-1">
+            <div class="menu-item-1">
+                <img src="img/bantuan.jpg" alt="Help">
+                <p>Bantuan</p>
+            </div>
+            <div class="menu-item-1">
+                <img src="img/privasi.jpg" alt="Privacy">
+                <p>Privasi</p>
+            </div>
+        </div>
+
+        <div class="logout">
+            <button id="logoutButton">Keluar</button>
+        </div>
+
+        <!-- Pop-up konfirmasi -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <h3>Keluar dari akun Anda?</h3>
+                <button class="cancel" id="cancelButton">Batalkan</button>
+                <button class="confirm" id="confirmButton">Keluar</button>
+            </div>
+        </div>
+
+        <script>
+            // JavaScript untuk mengontrol pop-up
+            const logoutButton = document.getElementById('logoutButton');
+            const popupOverlay = document.getElementById('popupOverlay');
+            const cancelButton = document.getElementById('cancelButton');
+            const confirmButton = document.getElementById('confirmButton');
+
+            // Tampilkan pop-up saat tombol "Keluar" diklik
+            logoutButton.addEventListener('click', () => {
+                popupOverlay.style.display = 'flex';
+            });
+
+            // Sembunyikan pop-up saat tombol "Batalkan" diklik
+            cancelButton.addEventListener('click', () => {
+                popupOverlay.style.display = 'none';
+            });
+        </script>
+    </div>
+</body>
+
+</html>

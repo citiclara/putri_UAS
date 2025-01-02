@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teman</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header-1 {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 16px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header-1 img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .content {
+            margin-top: 60px;
+            padding: 16px;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .page-header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .search-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: none;
+            background-color: #f0f2f5;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .requests-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            margin-top: 24px;
+        }
+
+        .requests-header p:first-child {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .requests-header p:last-child {
+            color: #000000;
+            font-size: 14px;
+        }
+
+        .friend-request {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 8px 0;
+        }
+
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .friend-info {
+            flex: 1;
+        }
+
+        .friend-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .confirm-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            background-color: #1877f2;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .delete-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            background-color: #e4e6eb;
+            color: #000;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-1">
+            <a href="index.html"><img src="img/home.jpg" alt="home"></a>
+            <a href="nonton.html"><img src="img/watch.jpg" alt="nonton"></a>
+            <a href="teman.html"><img src="img/add_friends.jpg" alt="teman"></a>
+            <img src="img/user.jpg" alt="user">
+            <img src="img/bel.jpg" alt="notif">
+            <a href="lainnya.html"><img src="img/lainnya.jpg" alt="lain"></a>
+        </div>
+
+        <div class="content">
+            <div class="page-header">
+                <h1>Teman</h1>
+                <img src="img/cari.jpg" alt="cariteman" class="search-icon">
+            </div>
+
+            <div class="tab-buttons">
+                <button class="tab-button">Saran</button>
+                <button class="tab-button">Teman Anda</button>
+            </div>
+
+            <div class="requests-header">
+                <p>Permintaan pertemanan</p>
+                <p>4 Lihat Semua</p>
+            </div>
+
+            <div class="friend-request">
+                <img src="img/salsa.jpg" alt="photo_profil" class="profile-pic">
+                <div class="friend-info">
+                    <div class="friend-name">Salsa</div>
+                    <div class="action-buttons">
+                        <button class="confirm-btn">Konfirmasi</button>
+                        <button class="delete-btn">Hapus</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="friend-request">
+                <img src="img/bubu.jpg" alt="photo_profil" class="profile-pic">
+                <div class="friend-info">
+                    <div class="friend-name">BUBU</div>
+                    <div class="action-buttons">
+                        <button class="confirm-btn">Konfirmasi</button>
+                        <button class="delete-btn">Hapus</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="friend-request">
+                <img src="img/nini_sa.jpg" alt="photo_profil" class="profile-pic">
+                <div class="friend-info">
+                    <div class="friend-name">NINI_SA</div>
+                    <div class="action-buttons">
+                        <button class="confirm-btn">Konfirmasi</button>
+                        <button class="delete-btn">Hapus</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="friend-request">
+                <img src="img/put_123.jpg" alt="photo_profil" class="profile-pic">
+                <div class="friend-info">
+                    <div class="friend-name">PUT_123</div>
+                    <div class="action-buttons">
+                        <button class="confirm-btn">Konfirmasi</button>
+                        <button class="delete-btn">Hapus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

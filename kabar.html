@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            min-width: 320px;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: white;
+            padding: 12px 16px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .header img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .header-1 {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 16px;
+            position: fixed;
+            top: 50px;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            z-index: 1;
+        }
+
+        .header-1::-webkit-scrollbar {
+            display: none;
+        }
+
+        .header-1 p {
+            white-space: nowrap;
+            padding: 0 12px;
+            font-size: 0.9rem;
+        }
+
+        .content {
+            margin-top: 100px;
+        }
+
+        .post {
+            background: white;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .post-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .post-header div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .post-header strong {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 0.9rem;
+        }
+
+        .post-header button {
+            background: none;
+            border: none;
+            padding: 4px 8px;
+            color: #65676b;
+            font-size: 1rem;
+        }
+
+        .nested-post {
+            margin: -4px 0 0 0;
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        .post-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 0;
+            margin: 8px 0;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-top: 1px solid #eee;
+            margin-top: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .action-button {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: -20%;
+            margin-top: -1%;
+        }
+
+        .post-actions img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        @media screen and (max-width: 480px) {
+            .header-1 {
+                justify-content: flex-start;
+                gap: 16px;
+            }
+
+            .post-header button {
+                padding: 4px;
+            }
+
+            .action-button {
+                font-size: 0.8rem;
+            }
+
+            .nested-post {
+                margin: 0;
+                border-radius: 4px;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .header h2 {
+                font-size: 1.1rem;
+            }
+
+            .header-1 p {
+                padding: 0 8px;
+                font-size: 0.8rem;
+            }
+
+            .post {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="lainnya.html" style="text-decoration: none;">
+                <img src="img/left.png" alt="panah">
+            </a>
+            <h2>Beranda</h2>
+            <img src="img/cari.jpg" alt="cari">
+        </div>
+
+        <div class="header-1">
+            <p style="color: #1877f2;">Semua</p>
+            <p>Favorite</p>
+            <p>Teman</p>
+            <p>Grup</p>
+            <p>Halaman</p>
+        </div>
+
+        <div class="content">
+            <div class="post">
+                <div class="post-header">
+                    <img src="img/olshop.jpeg" alt="user">
+                    <div>
+                        <strong>jual beli barang bekas area Surabaya</strong>
+                        <div style="color: #65676b; font-size: 0.8rem;">
+                            <strong>Olzhop Titanium · </strong>1 mnt
+                        </div>
+                    </div>
+                    <button>...</button>
+                    <button>✕</button>
+                </div>
+
+                <div class="nested-post">
+                    <div class="post-header">
+                        <img src="img/photo_p.jpg" alt="user">
+                        <div>
+                            <strong>Olzhop Titanium</strong>
+                            <div style="color: #65676b; font-size: 0.8rem;">2 mnt</div>
+                        </div>
+                    </div>
+                    <p>Ready 25 titanium</p>
+                    <img src="img/berita-1.jpg" alt="Product" class="post-image">
+                    <div class="post-actions">
+                        <img src="img/like.jpg" alt="like">
+                        <p class="action-button">Suka</p>
+                        <img src="img/komen.jpg" alt="komen" style="width: 70px; height: 70px; margin-top: -1.3%;">
+                        <p class="action-button">Komentar</p>
+                        <img src="img/wa.jpg" alt="wa" style="width: 40px; height: 40px;">
+                        <p class="action-button">Kirim</p>
+                        <img src="img/share.jpg" alt="share" style="width: 60px; height: 60px; margin-top: -1.1%;">
+                        <p class="action-button">Bagikan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post" style="border: 1px solid #ddd;">
+                <div class="post-header">
+                    <img src="img/oti170406artisjualan-logo.jpg" alt="user"
+                        style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;">
+                    <div>
+                        <strong>Januar</strong>
+                        <div style="color: #666; font-size: 0.8rem;">2 mnt</div>
+                    </div>
+                </div>
+                <p>Barang Bekas harga mulai 5000</p>
+                <img src="img/berita-2.jpeg" alt="Church Service" class="post-image">
+                <div class="post-actions">
+                    <img src="img/like.jpg" alt="like">
+                    <p class="action-button">Suka</p>
+                    <img src="img/komen.jpg" alt="komen" style="width: 70px; height: 70px; margin-top: -1.3%;">
+                    <p class="action-button">Komentar</p>
+                    <img src="img/wa.jpg" alt="wa" style="width: 40px; height: 40px;">
+                    <p class="action-button">Kirim</p>
+                    <img src="img/share.jpg" alt="share" style="width: 60px; height: 60px; margin-top: -1.1%;">
+                    <p class="action-button">Bagikan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

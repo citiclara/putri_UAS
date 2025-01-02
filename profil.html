@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .header-1 {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 16px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            z-index: 100;
+        }
+
+        .header-1 img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .profile-cover {
+            margin-top: 54px;
+            height: 180px;
+            position: relative;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .camera-icon {
+            position: absolute;
+            right: 8px;
+            bottom: 8px;
+            padding: 6px;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+        .profile-info {
+            position: relative;
+            padding: 0 12px;
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-top: -50px;
+            position: relative;
+        }
+
+        .camera-icon-profile {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 6px;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            margin: 8px 0;
+        }
+
+        .profile-followers {
+            color: #65676B;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .profile-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .top-action {
+            width: 100%;
+        }
+
+        .bottom-actions {
+            display: flex;
+            gap: 6px;
+        }
+
+        .btn {
+            padding: 8px;
+            border-radius: 6px;
+            border: none;
+            font-weight: 600;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-color: #1877F2;
+            color: white;
+            width: 100%;
+        }
+
+        .btn-secondary {
+            background-color: #E4E6EB;
+            color: #050505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            flex: 1;
+        }
+
+        .profile-tabs {
+            display: flex;
+            border-top: 1px solid #ddd;
+            margin-top: 8px;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px 8px;
+            text-align: center;
+            border: none;
+            background: none;
+            font-weight: 600;
+            color: #65676B;
+            font-size: 13px;
+        }
+
+        .details {
+            padding: 12px;
+            border-top: 8px solid #f0f2f5;
+        }
+
+        .details h4 {
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .detail-item img {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (max-width: 360px) {
+            .btn {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            .profile-name {
+                font-size: 18px;
+            }
+
+            .profile-picture {
+                width: 90px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-1">
+            <a href="index.html"><img src="img/home.jpg" alt="home"></a>
+            <a href="nonton.html"><img src="img/watch.jpg" alt="nonton"></a>
+            <a href="teman.html"><img src="img/add_friends.jpg" alt="teman"></a>
+            <img src="img/user.jpg" alt="user">
+            <img src="img/bel.jpg" alt="notif">
+            <a href="lainnya.html"><img src="img/lainnya.jpg" alt="lain"></a>
+        </div>
+
+        <div class="profile-cover">
+            <img src="img/sampul.jpg" alt="sampul" class="cover-image">
+            <div class="camera-icon"><img src="img/kamera.jpg" alt="kamera" style="width: 20px; border-radius: 50%;"></div>
+        </div>
+
+        <div class="profile-info">
+            <div style="position: relative; width: fit-content;">
+                <img src="img/pp.jpg" alt="photo_profil" class="profile-picture">
+                <div class="camera-icon-profile"><img src="img/kamera.jpg" alt="kamera" style="width: 20px; border-radius: 50%;"></div>
+            </div>
+            <h1 class="profile-name">Putry Jae</h1>
+            <div class="profile-followers">1,7 rb teman</div>
+
+            <div class="profile-actions">
+                <div class="top-action">
+                    <button class="btn btn-primary">+ Tambahkan ke cerita</button>
+                </div>
+                <div class="bottom-actions">
+                    <button class="btn btn-secondary"><img src="img/edit_9759158.png" alt="edit_9759158" style="width: 20px;">Edit profil</button>
+                    <button class="btn btn-secondary">⋮</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-tabs">
+            <button class="tab">Postingan</button>
+            <button class="tab">Foto</button>
+            <button class="tab">Video</button>
+        </div>
+
+        <div class="details">
+            <h4>Detail</h4>
+            <div class="detail-item">
+                <img src="img/toga.jpg" alt="toga">
+                <p>Pernah belajar di SMPK st.Ignatius Loyola</p>
+            </div>
+            <div class="detail-item">
+                <img src="img/rumah.jpg" alt="rumah">
+                <p>Tinggal di <strong>LabuanBajo, Nusa Tenggara Timur, Indonesia</strong></p>
+            </div>
+            <div class="detail-item">
+                <img src="img/asal.jpg" alt="asal">
+                <p>Dari <strong>Manggarai, Nusa Tenggara Timur, Indonesia</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
