@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifikasi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header-1 {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 16px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header-1 img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .content {
+            margin-top: 60px;
+            padding: 16px;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            top: 30%;
+        }
+
+        .page-header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20%;
+        }
+
+        .search-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 16px 0;
+            color: #65676b;
+        }
+
+        .friend {
+            display: flex;
+            padding: 12px 0;
+            position: relative;
+            background-color: #e2eaf6;
+            margin-bottom: 8px;
+        }
+
+        .friend-image {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            margin: 0 12px;
+        }
+
+        .friend-info {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .friend-info p {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .timestamp {
+            color: #65676b;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .more-options {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: #0866ff;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #e4e6eb;
+            color: #050505;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-1">
+            <a href="index.html"><img src="img/home.jpg" alt="home"></a>
+            <a href="nonton.html"><img src="img/watch.jpg" alt="nonton" style="width: 70px; height: 70px;"></a>
+            <a href="teman.html"><img src="img/add_friends.jpg" alt="teman"></a>
+            <a href="profil.html"><img src="img/user.jpg" alt="user" style="width: 50px; height: 50px;"></a>
+            <img src="img/bel.jpg" alt="notif" style="width: 70px; height: 70px;">
+            <a href="lainnya.html"><img src="img/lainnya.jpg" alt="lain" style="width: 60px; height: 60px;"></a>
+        </div>
+
+        <div class="content">
+            <div class="page-header">
+                <h1>Notifikasi</h1>
+                <img src="img/cari.jpg" alt="search" class="search-icon">
+            </div>
+
+            <h3>Baru</h3>
+            <div class="friend">
+                <img src="img/Profile-Picture.jpg" alt="" class="friend-image">
+                <div class="friend-info">
+                    <p><strong>ewhykhadu,</strong> Halaman yang baru-baru ini Anda lihat, mengundang Anda untuk
+                        bergab...</p>
+                    <p class="timestamp">3 hr</p>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary">Gabung</button>
+                        <button class="btn btn-secondary">Hapus</button>
+                    </div>
+                </div>
+                <div class="more-options">⋯</div>
+            </div>
+            <div class="friend">
+                <img src="img/Profile-Picture-1.jpg" alt="" class="friend-image">
+                <div class="friend-info">
+                    <p><strong>jual beli barang bekas area labuan...</strong>"Minta tolong, yang liat boleh hub
+                        08736272612"</p>
+                    <p>1hr</p>
+                </div>
+                <div class="more-options">⋯</div>
+            </div>
+            <div class="friend">
+                <img src="img/Profile-Picture-2.jpg" alt="" class="friend-image">
+                <div class="friend-info">
+                    <p><strong>URUSAN K??</strong></p>
+                    <p>2hr</p>
+                </div>
+                <div class="more-options">⋯</div>
+            </div>
+            <h3>Terdahulu</h3>
+            <div class="friend">
+                <img src="img/Profile-Picture-3.jpg" alt="" class="friend-image">
+                <div class="friend-info">
+                    <p><strong>Manggarai Punya Tombo:</strong>"Mohon bantuannya ase kae, mungkin ada yang lihat ini
+                        mot.."</p>
+                    <p>8hr</p>
+                </div>
+                <div class="more-options">⋯</div>
+            </div>
+            <div class="friend">
+                <img src="img/Profile-Picture-4.jpg" alt="" class="friend-image">
+                <div class="friend-info">
+                    <p><strong>ewhykhadu,</strong> Halaman yang baru-baru ini Anda lihat, mengundang Anda untuk
+                        bergab...</p>
+                    <p class="timestamp">3 hr</p>
+                </div>
+                <div class="more-options">⋯</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
