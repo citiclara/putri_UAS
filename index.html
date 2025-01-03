@@ -76,7 +76,7 @@
         }
 
         .post-input {
-            margin-top: 60%;
+            margin-top: 50%;
             padding: 12px;
             background: white;
             border-radius: 0;
@@ -226,6 +226,24 @@
             gap: 5px;
         }
 
+        .liked {
+            color: #1877f2;
+            font-weight: bold;
+        }
+
+        .like-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .like-button:hover {
+            opacity: 0.8;
+        }
+
         /* Update post-actions */
         .post-actions {
             display: flex;
@@ -283,7 +301,8 @@
         </div>
 
         <div class="post-input">
-            <a href="profil.html"><img src="img/edit_story.jpg" alt="edit_story" style="width: 50px; height: 50px; object-fit: contain;"></a>
+            <a href="profil.html"><img src="img/edit_story.jpg" alt="edit_story"
+                    style="width: 50px; height: 50px; object-fit: contain;"></a>
             <input type="text" class="input-box" placeholder="Apa yang anda pikirkan?">
             <img src="img/pictures .jpg" alt="pictures" style="width: 50px; height: 50px; object-fit: contain;">
         </div>
@@ -313,20 +332,43 @@
             <img src="img/posting.jpg" alt="Church Service" class="post-image">
             <div class="likes-comments">
                 <div class="likes-left">
-                    <img src="img/suka.jpg" alt="like" style="width: 45px; height: 40px;">
+                    <img src="img/suka.jpg" alt="like" style="width: 60px; height: 50px;">
                     <span>30 suka</span>
                 </div>
                 <span>10 Komentar</span>
             </div>
             <div class="post-actions">
-                <img src="img/like.jpg" alt="like"><p class="action-button">Suka</p>
-                <img src="img/komen.jpg" alt="komen" style="width: 40px; height: 40px; margin-top: -1.3%;"><p
-                    class="action-button">Komentar</p>
-                <img src="img/wa.jpg" alt="wa" style="width: 20px; height: 20px;"><p
-                    class="action-button">Kirim</p>
-                <img src="img/share.jpg" alt="share" style="width: 30px; height: 30px; margin-top: -1.1%;"><p
-                    class="action-button">Bagikan</p>
+                <button class="like-button" onclick="toggleLike(this)"
+                    style="background-color: transparent; border: none;">
+                    <img src="img/like.jpg" alt="like" class="like-icon">
+                    <span class="action-button">Suka</span>
+                </button>
+                <img src="img/komen.jpg" alt="komen" style="width: 40px; height: 40px; margin-top: -1.3%;">
+                <p class="action-button">Komentar</p>
+                <img src="img/wa.jpg" alt="wa" style="width: 20px; height: 20px;">
+                <p class="action-button">Kirim</p>
+                <img src="img/share.jpg" alt="share" style="width: 30px; height: 30px; margin-top: -1.1%;">
+                <p class="action-button">Bagikan</p>
             </div>
+
+            <script>
+                function toggleLike(button) {
+                    const likeIcon = button.querySelector('.like-icon');
+                    const likeText = button.querySelector('.action-button');
+
+                    if (!button.classList.contains('liked')) {
+                        // Change to blue thumb
+                        likeIcon.src = 'img/like_6573666.png';  // Assume you have a blue version of the thumb
+                        button.classList.add('liked');
+                        likeText.classList.add('liked');
+                    } else {
+                        // Change back to normal thumb
+                        likeIcon.src = 'img/like.jpg';
+                        button.classList.remove('liked');
+                        likeText.classList.remove('liked');
+                    }
+                }
+            </script>
         </div>
     </div>
 </body>
